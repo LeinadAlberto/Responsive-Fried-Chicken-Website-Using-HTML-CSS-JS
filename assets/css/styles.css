@@ -574,7 +574,7 @@ img {
 }
 
 .combo__title {
-	font-size: var(--bigger-font-size);
+	font-size: var(--biggest-font-size);
 	color: var(--white-color);
 	line-height: 110%;
 	letter-spacing: 10px;
@@ -840,12 +840,82 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+	.container {
+		margin-inline: 1rem;
+	}
 
+	.home__title, 
+	.contact__title {
+		font-size: 2rem
+	}
+
+	.combo__title, 
+	.contact__title span {
+		font-size: 2.5rem;
+	}
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+	.nav__menu {
+		width: 55%;
+	}
 
+	.home__container, 
+	.about__container, 
+	.order__container {
+		grid-template-columns: 400px;
+		justify-content: center;
+	}
+}
 
 /* For large devices */
+@media screen and (min-width: 1150px) {
+	.container {
+		margin-inline: auto;
+	}
 
+	.section {
+		padding-block: 7rem 2rem;
+	}
+
+	.nav {
+		height: calc(var(--header-height) + 2rem);
+	}
+
+	.nav__toggle, 
+	.nav__close {
+		display: none;
+	}
+
+	.nav__menu {
+		width: initial;
+	}
+
+	.nav__list {
+		flex-direction: row;
+		column-gap: 4rem;
+	}
+
+	.home__container {
+		grid-template-columns: 530px 550px;
+		align-items: center;
+		column-gap: 2rem;
+		padding-block: 8rem 3rem;
+	}
+
+	.home__data {
+		text-align: initial;
+	}
+
+	.home__title {
+		margin-bottom: 1rem;
+		position: relative;
+		z-index: 5
+	}
+
+
+}
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
